@@ -1,0 +1,24 @@
+E:\Visual Basic Project\Marker Counter\bin\Debug\Marker Counter.exe.config
+E:\Visual Basic Project\Marker Counter\bin\Debug\Marker Counter.exe
+E:\Visual Basic Project\Marker Counter\bin\Debug\Marker Counter.pdb
+E:\Visual Basic Project\Marker Counter\bin\Debug\Marker Counter.xml
+E:\Visual Basic Project\Marker Counter\obj\Debug\Marker Counter.vbprojAssemblyReference.cache
+E:\Visual Basic Project\Marker Counter\obj\Debug\Marker_Counter.Form1.resources
+E:\Visual Basic Project\Marker Counter\obj\Debug\Marker_Counter.Resources.resources
+E:\Visual Basic Project\Marker Counter\obj\Debug\Marker Counter.vbproj.GenerateResource.cache
+E:\Visual Basic Project\Marker Counter\obj\Debug\Marker Counter.vbproj.CoreCompileInputs.cache
+E:\Visual Basic Project\Marker Counter\obj\Debug\Marker Counter.exe
+E:\Visual Basic Project\Marker Counter\obj\Debug\Marker Counter.xml
+E:\Visual Basic Project\Marker Counter\obj\Debug\Marker Counter.pdb
+C:\Users\jlukas\Desktop\My Project\Marker Counter Team\Marker Counter Desktop Application\Marker Counter\bin\Debug\Marker Counter.exe.config
+C:\Users\jlukas\Desktop\My Project\Marker Counter Team\Marker Counter Desktop Application\Marker Counter\bin\Debug\Marker Counter.exe
+C:\Users\jlukas\Desktop\My Project\Marker Counter Team\Marker Counter Desktop Application\Marker Counter\bin\Debug\Marker Counter.pdb
+C:\Users\jlukas\Desktop\My Project\Marker Counter Team\Marker Counter Desktop Application\Marker Counter\bin\Debug\Marker Counter.xml
+C:\Users\jlukas\Desktop\My Project\Marker Counter Team\Marker Counter Desktop Application\Marker Counter\obj\Debug\Marker Counter.vbprojAssemblyReference.cache
+C:\Users\jlukas\Desktop\My Project\Marker Counter Team\Marker Counter Desktop Application\Marker Counter\obj\Debug\Marker_Counter.Form1.resources
+C:\Users\jlukas\Desktop\My Project\Marker Counter Team\Marker Counter Desktop Application\Marker Counter\obj\Debug\Marker_Counter.Resources.resources
+C:\Users\jlukas\Desktop\My Project\Marker Counter Team\Marker Counter Desktop Application\Marker Counter\obj\Debug\Marker Counter.vbproj.GenerateResource.cache
+C:\Users\jlukas\Desktop\My Project\Marker Counter Team\Marker Counter Desktop Application\Marker Counter\obj\Debug\Marker Counter.vbproj.CoreCompileInputs.cache
+C:\Users\jlukas\Desktop\My Project\Marker Counter Team\Marker Counter Desktop Application\Marker Counter\obj\Debug\Marker Counter.exe
+C:\Users\jlukas\Desktop\My Project\Marker Counter Team\Marker Counter Desktop Application\Marker Counter\obj\Debug\Marker Counter.xml
+C:\Users\jlukas\Desktop\My Project\Marker Counter Team\Marker Counter Desktop Application\Marker Counter\obj\Debug\Marker Counter.pdb
