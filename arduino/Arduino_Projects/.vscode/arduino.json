@@ -1,0 +1,8 @@
+{
+    "board": "arduino:avr:uno",
+    "port": "COM18",
+    "programmer": "AVR ISP",
+    "sketch": "NRF_DC_Motor_Joystick_controller_Transmitter\\NRF_DC_Motor_Joystick_controller_Transmitter.ino",
+    "output": "../build",
+    "debugger": "jlink"
+}

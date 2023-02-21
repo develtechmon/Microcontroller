@@ -25,5 +25,7 @@ void loop() {
     radio.read(&receivedData, sizeof(receivedData));
     yAxis = atoi(&receivedData[0]);
     delay(10);
+
+    Serial.println(xAxis + " " + yAxis);
   }
 }

@@ -303,7 +303,6 @@ void found_ball()
           basketFound = 1;
         }
       }
-	  
       if ((ballFound == 1)&&(basketFound == 1)) {
         servo_3 = 1;
         servo_2 = 1;
