@@ -92,16 +92,23 @@ void receive_the_data()
       }
     }
     
-    int throttle = map(Array[2],0,255,1900,1050);
-    if ((throttle > 0) && (arm_flag==1)) {
+    int throttle = map(Array[2],0,255,1900,1045); //1050
+    if ((throttle != 0) && (arm_flag==1)) {
       arm_on +=1;
       if (arm_on < 2) {
         Serial.println("Set Vehicle: Arm mode");
         ARM('a');
       }
 
+      delay(5);
+      
       if (takeoff_flag==1){
-        Serial.println(throttle);  
+        Serial.println(throttle);
+        current_roll = 0;
+        current_pitch = 0;
+        current_throttle = throttle;
+        current_yaw = 0;
+        OVERRIDE_RC(current_roll, current_pitch, current_throttle, current_yaw);
     }
     }
   }
@@ -151,6 +158,16 @@ void ARM(char menu) {
   uint16_t len = mavlink_msg_to_send_buffer(buf, &msg);
   Serial1.write(buf, len);
   takeoff_flag = 1;
+}
+
+void OVERRIDE_RC(int roll, int pitch, int throttle, int yaw) {
+  mavlink_message_t msg;
+  uint8_t buf[MAVLINK_MAX_PACKET_LEN];
+
+  mavlink_msg_rc_channels_override_pack(255, 151, &msg, 1, 0, roll, pitch, throttle, yaw, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);  // CHANNEL = 1(ROLL), 2(PITCH), 3(Throttle), 4(Yaw) , 5, 6, 7, 8
+
+  uint16_t len = mavlink_msg_to_send_buffer(buf, &msg);
+  Serial1.write(buf, len);
 }
 
 void CHANGEMODE(int mode) {
