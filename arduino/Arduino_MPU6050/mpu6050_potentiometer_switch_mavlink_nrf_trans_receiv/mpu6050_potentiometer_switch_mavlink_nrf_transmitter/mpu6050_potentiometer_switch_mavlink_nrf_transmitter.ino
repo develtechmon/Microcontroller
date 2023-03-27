@@ -23,8 +23,8 @@ void setup()
   Serial.begin(57600);
   Wire.begin();
 
-  pinMode(land, INPUT_PULLUP);
-  pinMode(guided, INPUT_PULLUP);
+  pinMode(arm, INPUT_PULLUP);
+  pinMode(disarm, INPUT_PULLUP);
   
   mpu.initialize();
 
@@ -58,7 +58,7 @@ void loop()
 
   Serial.print("Throttle T = ");
   Serial.print(Array[2]);
-  SSerial.print("  ");
+  Serial.print("  ");
 
   Serial.print("Roll R = ");
   Serial.print(Array[3]);

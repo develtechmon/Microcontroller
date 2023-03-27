@@ -106,12 +106,12 @@ void receive_the_data()
     } delay(3);
 
     // Set DISARM Mode
-    elif (Array[1] == 1){
+     if (Array[1] == 1){
       disarm_flag +=1;
       if (disarm_flag < 2){
         Serial.println("Self Vehicle: Disarm Mode");
         arm_flag = 0;
-        ARM('o')
+        ARM('o');
       }
     } delay(3);
 
@@ -246,5 +246,3 @@ void loop()
   // NRF - receive data from Arduino Nano 
   receive_the_data();
  }
-
-
