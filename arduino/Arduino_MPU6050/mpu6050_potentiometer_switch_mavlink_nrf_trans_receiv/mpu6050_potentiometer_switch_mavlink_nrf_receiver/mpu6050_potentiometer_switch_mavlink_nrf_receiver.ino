@@ -117,14 +117,14 @@ void receive_the_data()
 
     // Set THROTTLE input
     if (takeoff_flag == 1){
-      int throttle = map(Array[2],0,255,1900,1050);
+      int throttle = map(Array[2],0,255,2046,1050);
       Serial.print("Current Roll R = ");
       Serial.print(current_roll);
       Serial.print(" ");
 
       Serial.print("Current Pitch P = ");
       Serial.print(current_pitch);
-      Serial.print(" ");
+      Serial.print(" ");//
 
       Serial.print("Current Throttle T = ");
       Serial.print(current_throttle);

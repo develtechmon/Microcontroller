@@ -39,10 +39,15 @@ void setup()
 void loop()
 {
   mpu.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
+
+  int data = analogRead(A0);
+  int throttle = map(data,0,1023,2046,1050);
   
   Array[0] = digitalRead(arm);
   Array[1] = digitalRead(disarm);
-  Array[2] = analogRead(A0);
+  Array[2] = throttle;
+  //Array[2] = analogRead(A0);
+
   Array[3] = map(ax, -17000, 17000, 0, 255 ); //Send X axis data
   Array[4] = map(ay, -17000, 17000, 0, 255);  //Send Y axis data
 
