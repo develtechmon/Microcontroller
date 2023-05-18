@@ -1,21 +1,32 @@
-from __future__ import print_function
-import time
-from RF24 import RF24, RF24_PA_LOW
-import RPi.GPIO as GPIO
+'''
+In this v1_2, we're going to use different nrf24 library. Instructions as follow
+1. Open this Link alongside for your reference
+2. git clone https://github.com/BLavery/lib_nrf24.git
+'''
+
+from lib_nrf24 import NRF24  
+import RPi.GPIO as GPIO  
+import spidev
+
+GPIO.setmode(GPIO.BCM)
 
 pipes = [0xF0F0F0F0E1, 0xF0F0F0F0D2]
 
-radio = RF24(22, 0);
-radio.begin()
-radio.setAutoAck(False);
+radio = NRF24(GPIO, spidev.SpiDev())
+radio.begin(0, 22)   
+radio.setAutoAck(True)       
 radio.enableDynamicPayloads()
-radio.setRetries(5,15)
-radio.printDetails()
 
-print('Role: Pong Back, awaiting transmission')
+#radio.setPayloadSize(32) 
+radio.setChannel(115)
+#radio.setDataRate(NRF24.BR_1MBPS)   
+#radio.setPALevel(NRF24.PA_MIN) 
+#radio.enableAckPayload()
+
 radio.openWritingPipe(pipes[1])
 radio.openReadingPipe(1,pipes[0])
 radio.startListening()
+radio.printDetails()    
 
 def read_data():
     if radio.available():
@@ -35,7 +46,7 @@ def read_data():
 
             # Now, resume listening so we catch the next packets.
             radio.startListening()
-    
+
 if __name__ == "__main__":
     while True:
         read_data()

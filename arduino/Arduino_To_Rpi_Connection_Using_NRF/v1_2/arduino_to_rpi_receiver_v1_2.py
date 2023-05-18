@@ -21,9 +21,8 @@ radio.enableDynamicPayloads()
 radio.setChannel(115)
 #radio.setDataRate(NRF24.BR_1MBPS)   
 #radio.setPALevel(NRF24.PA_MIN) 
-#radio.enableAckPayload()
+radio.enableAckPayload()
 
-radio.openWritingPipe(pipes[1])
 radio.openReadingPipe(1,pipes[0])
 radio.startListening()
 radio.printDetails()    
@@ -31,21 +30,22 @@ radio.printDetails()
 def read_data():
     if radio.available():
         while radio.available():
+            x = []
             len = radio.getDynamicPayloadSize()
-            receive_payload = radio.read(len)
-            receive_payload.decode('utf-8')
-
+            receive_payload = radio.read(x,len)
+            #receive_payload.decode('utf-8')
+            
             # READ - First, stop listening so we can talk
             print(receive_payload)
             #print("Sent the message: {}".format(receive_payload))
             radio.stopListening()
 
             # WRITE - Second, Send the final one back.
-            radio.write(receive_payload)
+            #radio.write(receive_payload)
             print('Got response.')
 
             # Now, resume listening so we catch the next packets.
-            radio.startListening()
+            #radio.startListening()
 
 if __name__ == "__main__":
     while True:
