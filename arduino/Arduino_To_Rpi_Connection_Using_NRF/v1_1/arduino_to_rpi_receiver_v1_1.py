@@ -20,21 +20,22 @@ radio.startListening()
 def read_data():
     if radio.available():
         while radio.available():
-            len = radio.getDynamicPayloadSize()
-            receive_payload = radio.read(len)
+            data = radio.getDynamicPayloadSize()
+            receive_payload = radio.read(data)
             receive_payload.decode('utf-8')
 
             # READ - First, stop listening so we can talk
             print(receive_payload)
             #print("Sent the message: {}".format(receive_payload))
-            radio.stopListening()
+            #radio.stopListening()
 
             # WRITE - Second, Send the final one back.
-            radio.write(receive_payload)
-            print('Got response.')
+            #radio.write(receive_payload)
+            #print('Got response.')
 
             # Now, resume listening so we catch the next packets.
-            radio.startListening()
+            #radio.startListening()
+            time.sleep(0.5)
     
 if __name__ == "__main__":
     while True:
