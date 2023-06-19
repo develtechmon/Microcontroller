@@ -20,7 +20,7 @@ void setup() {
 
 void loop() {
   //Array[0] = 23;
-  //Array[1] = 34;
+  Array[1] = 34;
 
     if (Serial.available() > 0) {
     // read incoming serial data:
