@@ -7,13 +7,15 @@
 3. NRF receiver and transmitter
 4. Breadboard for device placement
 
-## Schematic used in this project
+## Schematic used in this project for RPI Pico W and Without
 * PiCo ----- NRF
 * 3V3 ----- VCC
 * GND ----- GND
 * GP16 -----MISO
 * GP19 -----MOSI
 * GP18 -----SCK
+* GP4 (Pin 6) ----- CSE
+* GP5 (Pin 7) ----- CSN
 ![PiCO_Connections](https://user-images.githubusercontent.com/81543946/219866848-5d727f0e-4274-4cfd-a1ad-0342e7305d2c.png)
 
 
