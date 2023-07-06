@@ -5,7 +5,7 @@ import utime
 LEFT_MOTOR_PIN_1 = 10
 LEFT_MOTOR_PIN_2 = 11
 RIGHT_MOTOR_PIN_1 = 9
-RIGHT_MOTOR_PIN_2 = 8, . 
+RIGHT_MOTOR_PIN_2 = 8
 
 motor_pins = [LEFT_MOTOR_PIN_1, LEFT_MOTOR_PIN_2, RIGHT_MOTOR_PIN_1, RIGHT_MOTOR_PIN_2]
 
@@ -36,22 +36,22 @@ if __name__ == '__main__':
         print("*********Testing speed*********")
         for i in range(2):
             print("Moving at 100% speed")
-            robot_car.change_speed(100);
+            robot_car.change_speed(100)
             robot_car.move_forward()
             utime.sleep(2)
             
             print("Moving at 50% speed")
-            robot_car.change_speed(50);
+            robot_car.change_speed(50)
             robot_car.move_forward()
             utime.sleep(2)
             
             print("Moving at 20% of speed")
-            robot_car.change_speed(20);
+            robot_car.change_speed(20)
             robot_car.move_forward()
             utime.sleep(2)
             
             print("Moving at 0% of speed or the slowest")
-            robot_car.change_speed(0);
+            robot_car.change_speed(0)
             robot_car.move_forward()
             utime.sleep(2)
             
