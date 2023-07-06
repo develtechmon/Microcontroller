@@ -10,24 +10,24 @@ import random
 husky = HuskyLensLibrary("I2C") ## SERIAL OR I2C 
  
 #SPI(1) default pins
-spi1_sck=10
-spi1_mosi=11
-spi1_miso=8     #not use
-st7789_res = 12
-st7789_dc  = 13
-st7789_cs  = 9
+# spi1_sck=10
+# spi1_mosi=11
+# spi1_miso=8     #not use
+# st7789_res = 12
+# st7789_dc  = 13
+# st7789_cs  = 9
 disp_width = 240
 disp_height = 240
 CENTER_Y = int(disp_width/2)
 CENTER_X = int(disp_height/2)
  
-print(uos.uname())
-spi1 = machine.SPI(1, baudrate=40000000, polarity=1)
-print(spi1)
-display = st7789.ST7789(spi1, disp_width, disp_width,
-                          reset=machine.Pin(st7789_res, machine.Pin.OUT),
-                          dc=machine.Pin(st7789_dc, machine.Pin.OUT),
-                          xstart=0, ystart=0, rotation=0)
+# print(uos.uname())
+# spi1 = machine.SPI(1, baudrate=40000000, polarity=1)
+# print(spi1)
+# display = st7789.ST7789(spi1, disp_width, disp_width,
+#                           reset=machine.Pin(st7789_res, machine.Pin.OUT),
+#                           dc=machine.Pin(st7789_dc, machine.Pin.OUT),
+#                           xstart=0, ystart=0, rotation=0)
  
 while True:
     result = husky.command_request()
@@ -48,4 +48,5 @@ while True:
             
     except:
         pass
+
 
