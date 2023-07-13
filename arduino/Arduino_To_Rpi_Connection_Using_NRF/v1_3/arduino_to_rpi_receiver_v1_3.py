@@ -7,7 +7,7 @@ direction
 '''
 
 import time
-from RF24 import RF24, RF24_PA_HIGH
+from RF24 import RF24, RF24_PA_MIN
 import struct
 
 pipes = [0xF0F0F0F0E1, 0xF0F0F0F0D2]
@@ -17,7 +17,7 @@ radio = RF24(22, 0)  # Set CE and CSN pins
 radio.begin()
 radio.openWritingPipe(pipes[1])  # Set the writing pipe
 radio.openReadingPipe(1, pipes[0])  # Set the reading pipe
-radio.setPALevel(RF24_PA_HIGH)  # Set power level to high
+radio.setPALevel(RF24_PA_MIN)  # Set power level to high
 
 radio.setAutoAck(False);
 radio.enableDynamicPayloads()

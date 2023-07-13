@@ -14,7 +14,7 @@ void setup() {
 
   radio.setRetries(5, 15);
   radio.openWritingPipe(pipes[0]); // Set the address to send data
-  radio.setPALevel(RF24_PA_HIGH); // Set power level to high
+  radio.setPALevel(RF24_PA_MIN); // Set power level to high - orig RF24_PA_HIGH
   radio.stopListening();
 }
 
