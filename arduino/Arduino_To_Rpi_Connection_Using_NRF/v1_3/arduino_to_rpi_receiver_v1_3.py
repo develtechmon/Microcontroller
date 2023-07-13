@@ -26,10 +26,12 @@ radio.startListening()
 
 while True:
     if radio.available():
-        x = radio.read(radio.getDynamicPayloadSize())  # Read the received message
-        x.decode('utf-8')
+        r = radio.read(radio.getDynamicPayloadSize())  # Read the received message
+        r.decode('utf-8')
+        
+        x = chr(r[0])
         #print(x[0], x[1])
-        print(x[0])
+        print(chr(r[0]))
         
         if x[0] == "g":
             print("Enter Guided Mode")

@@ -33,52 +33,52 @@ void loop() {
 
     if (inChar == 'g') {
       Serial.println("Enter Guided Mode");
-      Array[0] = 0;
+      Array[0] = 'g';
     }
 
     else if (inChar == 'h') {
       Serial.println("Enter Stabilized Mode");
-      Array[0] = 1;
+      Array[0] = 'h';
     }
 
     else if (inChar == 'u') {
       Serial.println("Enter Takeoff Mode");
-      Array[0] = 2;
+      Array[0] = 'u';
     }
 
     else if (inChar == 'd') {
       Serial.println("Go Right");
-      Array[0] = 3;
+      Array[0] = 'd';
     }
 
     else if (inChar == 'a') {
       Serial.println("Go Left");
-      Array[0] = 4;
+      Array[0] = 'a';
     }
 
     else if (inChar == 's') {
       Serial.println("Go Back");
-      Array[0] = 5;
+      Array[0] = 's';
     }
 
     else if (inChar == 'w') {
       Serial.println("Go Forward");
-      Array[0] = 6;
+      Array[0] = 'w';
     }
 
     else if (inChar == 'l') {
       Serial.println("Enter Land Mode");
-      Array[0] = 7;
+      Array[0] = 'l';
     }
 
     else if (inChar == 'h') {
       Serial.println("Enter Hover Mode");
-      Array[0] = 8;
+      Array[0] = 'h';
     }
 
     else if (inChar == 'q') {
       Serial.println("Yaw Left");
-      Array[0] = 9;
+      Array[0] = 'q';
     }
 
     else if (inChar == 'e') {
