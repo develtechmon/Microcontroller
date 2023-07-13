@@ -31,37 +31,37 @@ while True:
         #print(x[0], x[1])
         print(x[0])
         
-        # if x[0] == "g":
-        #     print("Enter Guided Mode")
+        if x[0] == "g":
+            print("Enter Guided Mode")
             
-        # elif x[0] == "h":
-        #     print("Enter Stabilized Mode")
+        elif x[0] == "h":
+            print("Enter Stabilized Mode")
             
-        # elif x[0] == "u":
-        #     print("Enter Takeoff Mode")
+        elif x[0] == "u":
+            print("Enter Takeoff Mode")
         
-        # elif x[0] == "d":
-        #     print("Go Right")
+        elif x[0] == "d":
+            print("Go Right")
         
-        # elif x[0] == "a":
-        #     print("Go Left")
+        elif x[0] == "a":
+            print("Go Left")
         
-        # elif x[0] == "s":
-        #     print("Go Back")
+        elif x[0] == "s":
+            print("Go Back")
         
-        # elif x[0] == "w":
-        #     print("Go Forward")
+        elif x[0] == "w":
+            print("Go Forward")
         
-        # elif x[0] == "l":
-        #     print("Enter Land Mode")
+        elif x[0] == "l":
+            print("Enter Land Mode")
         
-        # elif x[0] == "h":
-        #     print("Enter Hover Mode")
+        elif x[0] == "h":
+            print("Enter Hover Mode")
             
-        # elif x[0] == "q":
-        #     print("Yaw Left")
+        elif x[0] == "q":
+            print("Yaw Left")
         
-        # elif x[0] == "e":
-        #     print("Yaw Right")
+        elif x[0] == "e":
+            print("Yaw Right")
         
  
